@@ -1,93 +1,39 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b1220">
-  <meta name="description" content="Explore the INDUS APPS marketplace concept: discover useful apps by category.">
-  <title>INDUS APPS — Discover what's useful</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="apps.css?v=20261116-2">
-  <script src="script.js?v=20261116-2" defer></script>
-</head>
-<body class="apps-page">
-  <div class="announcement"><span class="status-dot"></span> Building what's next, one idea at a time.</div>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="INDUS home"><span class="brand-mark">I<span>N</span></span><span class="brand-name">INDUS<span class="brand-period">.</span></span></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
-    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a><a href="services.html">Services</a><a href="indus-apps.html" aria-current="page">INDUS APPS</a><a href="index.html#divisions">Divisions</a><a href="index.html#approach">Our approach</a><a href="index.html#about">About</a>
-      <a class="nav-cta" href="index.html#contact">Let's talk <span>↗</span></a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="apps-hero">
-      <div class="apps-hero-copy">
-        <a class="back-link" href="index.html">← Back to INDUS home</a>
-        <div class="eyebrow"><span class="eyebrow-line"></span> INDUS APPS / DISCOVER</div>
-        <h1>Good apps.<br>Clear choices.<br><span class="gradient-text">One place.</span></h1>
-        <p>Explore the INDUS APPS marketplace concept — a single place to discover useful apps, digital tools and ideas from independent developers.</p>
-        <a class="button button-primary" href="#catalog">Explore app concepts <span>↓</span></a>
-      </div>
-      <div class="apps-hero-art" aria-hidden="true">
-        <div class="apps-glow"></div><div class="apps-orbit orbit-one"></div><div class="apps-orbit orbit-two"></div>
-        <div class="apps-window"><div class="apps-window-top"><span></span><span></span><span></span><b>INDUS / EXPLORE</b></div><div class="apps-window-title">Discover something useful.</div><div class="apps-window-grid"><i>✳</i><i>⌘</i><i>◫</i><i>◇</i></div><div class="apps-window-lines"><b></b><b></b><b></b></div></div>
-        <span class="apps-spark spark-one">✳</span><span class="apps-spark spark-two">+</span>
-      </div>
-      <div class="apps-hero-foot"><span>DISCOVER · EXPLORE · CREATE</span><span>01 / THE MARKETPLACE</span></div>
-    </section>
-
-    <section class="catalog-section section-wrap" id="catalog">
-      <div class="catalog-heading">
-        <div><div class="section-kicker">01 — EXPLORE THE COLLECTION</div><h2>Find your next<br><em>useful thing.</em></h2></div>
-        <p>Browse by category or search for an idea. These are sample concepts to demonstrate how the future catalogue may look.</p>
-      </div>
-      <div class="catalog-toolbar">
-        <label class="catalog-search"><span aria-hidden="true">⌕</span><input id="app-search" type="search" placeholder="Search apps, tools or categories..." autocomplete="off" aria-label="Search app concepts"><kbd>/</kbd></label>
-        <div class="category-filters" role="group" aria-label="Filter app concepts by category">
-          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All concepts <span>6</span></button>
-          <button class="filter-chip" type="button" data-filter="productivity" aria-pressed="false">Productivity</button>
-          <button class="filter-chip" type="button" data-filter="education" aria-pressed="false">Education</button>
-          <button class="filter-chip" type="button" data-filter="ai" aria-pressed="false">AI & tools</button>
-          <button class="filter-chip" type="button" data-filter="design" aria-pressed="false">Design</button>
-          <button class="filter-chip" type="button" data-filter="utilities" aria-pressed="false">Utilities</button>
-          <button class="filter-chip" type="button" data-filter="gaming" aria-pressed="false">Gaming</button>
-        </div>
-      </div>
-      <div class="catalog-meta"><span id="results-count" aria-live="polite">Showing 6 sample concepts</span><span>ALL ITEMS MARKED AS PREVIEW</span></div>
-      <div class="app-grid" id="app-grid">
-        <article class="app-card" data-category="productivity" data-search="indus notes notes writing productivity organise ideas">
-          <div class="app-card-top"><div class="app-icon icon-blue">N</div><span class="preview-tag">Concept preview</span></div><div class="app-card-body"><span class="app-category">PRODUCTIVITY</span><h3>INDUS Notes</h3><p>A simple space for collecting thoughts, notes and everyday ideas.</p></div><div class="app-card-foot"><span>INDUS concept</span><span class="app-status">Not available yet</span></div>
-        </article>
-        <article class="app-card" data-category="education" data-search="studyspark education learning study planner student revision">
-          <div class="app-card-top"><div class="app-icon icon-violet">S</div><span class="preview-tag">Concept preview</span></div><div class="app-card-body"><span class="app-category">EDUCATION</span><h3>StudySpark</h3><p>A learning companion concept for organising study topics and revision.</p></div><div class="app-card-foot"><span>INDUS concept</span><span class="app-status">Not available yet</span></div>
-        </article>
-        <article class="app-card" data-category="ai" data-search="promptdesk ai prompts writing assistant ideas">
-          <div class="app-card-top"><div class="app-icon icon-cyan">✳</div><span class="preview-tag">Concept preview</span></div><div class="app-card-body"><span class="app-category">AI & TOOLS</span><h3>PromptDesk</h3><p>A tidy workspace concept for saving and organising useful AI prompts.</p></div><div class="app-card-foot"><span>INDUS concept</span><span class="app-status">Not available yet</span></div>
-        </article>
-        <article class="app-card" data-category="design" data-search="pixelkit design creative assets colors inspiration">
-          <div class="app-card-top"><div class="app-icon icon-orange">P</div><span class="preview-tag">Concept preview</span></div><div class="app-card-body"><span class="app-category">DESIGN</span><h3>PixelKit</h3><p>A creative toolkit concept for collecting visual references and design ideas.</p></div><div class="app-card-foot"><span>INDUS concept</span><span class="app-status">Not available yet</span></div></article>
-        <article class="app-card" data-category="utilities" data-search="quickconvert converter utility units file everyday tools">
-          <div class="app-card-top"><div class="app-icon icon-green">↔</div><span class="preview-tag">Concept preview</span></div><div class="app-card-body"><span class="app-category">UTILITIES</span><h3>QuickConvert</h3><p>A handy conversion tools concept for common everyday tasks.</p></div><div class="app-card-foot"><span>INDUS concept</span><span class="app-status">Not available yet</span></div>
-        </article>
-        <article class="app-card" data-category="gaming" data-search="arena companion gaming esports team practice match notes">
-          <div class="app-card-top"><div class="app-icon icon-red">A</div><span class="preview-tag">Concept preview</span></div><div class="app-card-body"><span class="app-category">GAMING</span><h3>Arena Companion</h3><p>A team organiser concept for practice plans, match notes and schedules.</p></div><div class="app-card-foot"><span>INDUS concept</span><span class="app-status">Not available yet</span></div></article>
-      </div>
-      <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No matching concepts</h3><p>Try another search or choose a different category.</p><button class="reset-filters" id="reset-filters" type="button">Show all concepts</button></div>
-      <p class="catalog-disclaimer">Preview only: these example listings are not released apps. Downloads, developer submissions, accounts, ratings and app details will be added only when those features are ready.</p>
-    </section>
-
-    <section class="developer-strip">
-      <div class="section-wrap developer-strip-inner"><div><div class="section-kicker">02 — FOR DEVELOPERS</div><h2>Made something useful?</h2><p>In a future release, developers will be able to introduce their apps and manage their listings through INDUS.</p></div><span class="developer-coming">DEVELOPER SPACE<br><b>PLANNED</b></span></div>
-    </section>
-
-    <section class="apps-status section-wrap"><div class="apps-status-card"><div class="section-kicker">03 — PLATFORM STATUS</div><h2>Building the marketplace, step by step.</h2><p>This page is a visual preview. Search and category filters work on these sample concepts, but app downloads, real developer submissions, accounts and live listings are not available yet.</p><a class="button button-light" href="index.html">Explore the INDUS hub <span>↗</span></a></div></section>
-  </main>
-
-  <footer class="site-footer section-wrap"><a class="brand footer-brand" href="index.html"><span class="brand-mark">I<span>N</span></span><span class="brand-name">INDUS<span class="brand-period">.</span></span></a><p>Build. Discover. Grow.</p><span>© <span id="year"></span> INDUS. A growing technology initiative.</span></footer>
-</body>
-</html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0b1220">
+<meta name="description" content="Discover useful apps and digital experiences in the INDUS APPS marketplace preview."><title>INDUS APPS — Discover useful apps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="apps.css?v=20261117-marketplace1"><script src="script.js?v=20261117-marketplace1" defer></script>
+</head><body class="apps-page">
+<div class="announcement"><span class="status-dot"></span> Building what's next, one idea at a time.</div>
+<header class="site-header"><a class="brand" href="index.html" aria-label="INDUS home"><span class="brand-mark">I<span>N</span></span><span class="brand-name">INDUS<span class="brand-period">.</span></span></a>
+<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+<nav id="primary-nav" class="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="indus-apps.html" aria-current="page">INDUS APPS</a><a href="index.html#divisions">Divisions</a><a href="index.html#about">About</a><a class="nav-cta" href="index.html#contact">Let's talk <span>↗</span></a></nav></header>
+<main>
+<section class="market-hero"><div class="market-hero-inner"><a class="back-link" href="index.html">← Back to INDUS home</a><div class="eyebrow"><span class="eyebrow-line"></span> INDUS APPS / APP MARKETPLACE</div>
+<h1>Find the right app.<br><span class="gradient-text">Make it useful.</span></h1><p>Explore a growing collection of digital experiences, tools and ideas. Search by name or narrow your discovery with filters.</p>
+<div class="market-search-wrap"><label class="market-search"><span aria-hidden="true">⌕</span><input id="app-search" type="search" placeholder="Search apps, categories or developers..." autocomplete="off" aria-label="Search apps"><kbd>/</kbd></label><span class="search-hint">SEARCH THE COLLECTION</span></div>
+<div class="market-hero-foot"><span>DISCOVER · COMPARE · EXPLORE</span><span>01 / THE MARKETPLACE</span></div></div>
+<div class="hero-decoration" aria-hidden="true"><div class="hero-orbit"></div><div class="hero-orbit orbit-small"></div><div class="hero-glow"></div><div class="hero-tile tile-one">✳</div><div class="hero-tile tile-two">⌘</div><div class="hero-tile tile-three">◇</div></div></section>
+<section class="market-section"><div class="market-heading"><div><div class="section-kicker">02 — BROWSE THE COLLECTION</div><h2>Explore apps<br><em>your way.</em></h2></div><p>Use the filters to narrow the sample catalogue. This preview shows the intended marketplace experience.</p></div>
+<div class="market-layout"><aside class="filter-panel" aria-label="App filters"><div class="filter-panel-head"><h2>Filters</h2><button id="reset-filters" type="button">Reset all</button></div>
+<fieldset class="filter-group"><legend>App category</legend>
+<label><input type="checkbox" class="app-filter" data-filter-type="category" value="productivity"><span>Productivity</span></label><label><input type="checkbox" class="app-filter" data-filter-type="category" value="education"><span>Education</span></label><label><input type="checkbox" class="app-filter" data-filter-type="category" value="ai"><span>AI &amp; Tools</span></label><label><input type="checkbox" class="app-filter" data-filter-type="category" value="design"><span>Design</span></label><label><input type="checkbox" class="app-filter" data-filter-type="category" value="utilities"><span>Utilities</span></label><label><input type="checkbox" class="app-filter" data-filter-type="category" value="gaming"><span>Gaming</span></label></fieldset>
+<fieldset class="filter-group"><legend>Industry</legend><label><input type="checkbox" class="app-filter" data-filter-type="industry" value="personal"><span>Personal</span></label><label><input type="checkbox" class="app-filter" data-filter-type="industry" value="learning"><span>Learning</span></label><label><input type="checkbox" class="app-filter" data-filter-type="industry" value="business"><span>Business</span></label><label><input type="checkbox" class="app-filter" data-filter-type="industry" value="creative"><span>Creative</span></label></fieldset>
+<fieldset class="filter-group"><legend>Availability</legend><label><input type="checkbox" class="app-filter" data-filter-type="availability" value="preview"><span>Concept preview</span></label><label><input type="checkbox" class="app-filter" data-filter-type="availability" value="available"><span>Available now</span></label></fieldset>
+<div class="filter-note"><span>i</span><p>All listings shown here are sample concepts, not released apps.</p></div></aside>
+<div class="catalog-main"><div class="catalog-toolbar"><div><span class="catalog-label">APP DIRECTORY</span><p id="results-count" aria-live="polite">Showing 6 sample concepts</p></div><label class="sort-control">Sort by <select id="app-sort" aria-label="Sort apps"><option value="featured">Featured</option><option value="az">Name: A to Z</option><option value="za">Name: Z to A</option></select></label></div>
+<div class="app-grid" id="app-grid">
+<article class="app-card" data-name="INDUS Notes" data-category="productivity" data-industry="personal" data-availability="preview" data-search="indus notes writing productivity organise ideas personal"><div class="app-card-top"><div class="app-icon icon-blue">N</div><span class="preview-tag">PREVIEW</span></div><div class="app-card-body"><span class="app-category">PRODUCTIVITY</span><h3>INDUS Notes</h3><p>A simple space for collecting thoughts, notes and everyday ideas.</p></div><div class="app-card-foot"><span class="developer-name">INDUS concept</span><span class="app-status">Not released</span></div><div class="card-action">DETAILS COMING SOON <span>↗</span></div></article>
+<article class="app-card" data-name="StudySpark" data-category="education" data-industry="learning" data-availability="preview" data-search="studyspark education learning study planner student revision"><div class="app-card-top"><div class="app-icon icon-violet">S</div><span class="preview-tag">PREVIEW</span></div><div class="app-card-body"><span class="app-category">EDUCATION</span><h3>StudySpark</h3><p>A learning companion concept for organising study topics and revision.</p></div><div class="app-card-foot"><span class="developer-name">INDUS concept</span><span class="app-status">Not released</span></div><div class="card-action">DETAILS COMING SOON <span>↗</span></div></article>
+<article class="app-card" data-name="PromptDesk" data-category="ai" data-industry="business" data-availability="preview" data-search="promptdesk ai prompts writing assistant ideas business"><div class="app-card-top"><div class="app-icon icon-cyan">✳</div><span class="preview-tag">PREVIEW</span></div><div class="app-card-body"><span class="app-category">AI &amp; TOOLS</span><h3>PromptDesk</h3><p>A tidy workspace concept for saving and organising useful AI prompts.</p></div><div class="app-card-foot"><span class="developer-name">INDUS concept</span><span class="app-status">Not released</span></div><div class="card-action">DETAILS COMING SOON <span>↗</span></div></article>
+<article class="app-card" data-name="PixelKit" data-category="design" data-industry="creative" data-availability="preview" data-search="pixelkit design creative assets colors inspiration"><div class="app-card-top"><div class="app-icon icon-orange">P</div><span class="preview-tag">PREVIEW</span></div><div class="app-card-body"><span class="app-category">DESIGN</span><h3>PixelKit</h3><p>A creative toolkit concept for collecting visual references and design ideas.</p></div><div class="app-card-foot"><span class="developer-name">INDUS concept</span><span class="app-status">Not released</span></div><div class="card-action">DETAILS COMING SOON <span>↗</span></div></article>
+<article class="app-card" data-name="QuickConvert" data-category="utilities" data-industry="personal" data-availability="preview" data-search="quickconvert converter utility units file everyday tools personal"><div class="app-card-top"><div class="app-icon icon-green">↔</div><span class="preview-tag">PREVIEW</span></div><div class="app-card-body"><span class="app-category">UTILITIES</span><h3>QuickConvert</h3><p>A handy conversion tools concept for common everyday tasks.</p></div><div class="app-card-foot"><span class="developer-name">INDUS concept</span><span class="app-status">Not released</span></div><div class="card-action">DETAILS COMING SOON <span>↗</span></div></article>
+<article class="app-card" data-name="Arena Companion" data-category="gaming" data-industry="learning" data-availability="preview" data-search="arena companion gaming esports team practice match notes schedules"><div class="app-card-top"><div class="app-icon icon-red">A</div><span class="preview-tag">PREVIEW</span></div><div class="app-card-body"><span class="app-category">GAMING</span><h3>Arena Companion</h3><p>A team organiser concept for practice plans, match notes and schedules.</p></div><div class="app-card-foot"><span class="developer-name">INDUS concept</span><span class="app-status">Not released</span></div><div class="card-action">DETAILS COMING SOON <span>↗</span></div></article>
+</div><div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No matching apps</h3><p>Try changing your search or filters.</p><button class="reset-empty" id="reset-empty" type="button">Clear filters</button></div>
+<p class="catalog-disclaimer">Marketplace preview only: these six entries are illustrative concepts. Live listings, ratings, app detail pages, downloads and developer submissions are not available yet.</p></div></div></section>
+<section class="developer-strip"><div class="section-wrap developer-strip-inner"><div><div class="section-kicker">03 — FOR DEVELOPERS</div><h2>Have an app to share?</h2><p>Developer profiles, app submissions and listing management are planned for a later release. Every submission will require review before appearing publicly.</p></div><span class="developer-coming">DEVELOPER PORTAL<br><b>PLANNED</b></span></div></section>
+<section class="apps-status section-wrap"><div class="apps-status-card"><div class="section-kicker">04 — PLATFORM STATUS</div><h2>A marketplace built with care.</h2><p>We are shaping the discovery experience first. Downloads, accounts, ratings and developer tools will only be introduced after the required backend and app-review safeguards are ready.</p><a class="button button-light" href="index.html">Explore the INDUS hub <span>↗</span></a></div></section>
+</main><footer class="site-footer section-wrap"><a class="brand footer-brand" href="index.html"><span class="brand-mark">I<span>N</span></span><span class="brand-name">INDUS<span class="brand-period">.</span></span></a><p>Build. Discover. Grow.</p><span>© <span id="year"></span> INDUS. A growing technology initiative.</span></footer>
+</body></html>
