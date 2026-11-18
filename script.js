@@ -72,3 +72,16 @@ if (sortSelect && appGrid) sortSelect.addEventListener("change", () => {
 });
 if (resetFilters) resetFilters.addEventListener("click", resetAppFilters);
 if (resetEmpty) resetEmpty.addEventListener("click", resetAppFilters);
+/* Store category shortcuts and app concept details */
+const detailModal=document.querySelector("#app-detail-modal");
+const detailTitle=document.querySelector("#detail-title");
+const detailDescription=document.querySelector("#detail-description");
+const detailCategory=document.querySelector("#detail-category");
+const detailIcon=document.querySelector("#detail-icon");
+function openAppDetail(card){if(!detailModal)return;detailTitle.textContent=card.dataset.name||"App concept";detailDescription.textContent=card.querySelector(".app-card-body p")?.textContent||"";detailCategory.textContent=(card.querySelector(".app-category")?.textContent||"CONCEPT")+" · CONCEPT PREVIEW";detailIcon.textContent=card.querySelector(".app-icon")?.textContent?.trim()||"A";detailModal.hidden=false;document.body.style.overflow="hidden";detailModal.querySelector(".detail-close")?.focus();}
+function closeAppDetail(){if(detailModal){detailModal.hidden=true;document.body.style.overflow="";}}
+appCards.forEach(card=>{card.tabIndex=0;card.setAttribute("role","button");card.setAttribute("aria-label","View "+(card.dataset.name||"app")+" concept details");card.addEventListener("click",()=>openAppDetail(card));card.addEventListener("keydown",event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();openAppDetail(card);}});});
+detailModal?.querySelectorAll("[data-close-detail]").forEach(el=>el.addEventListener("click",closeAppDetail));
+document.addEventListener("keydown",event=>{if(event.key==="Escape"&&detailModal&&!detailModal.hidden)closeAppDetail();});
+document.querySelectorAll("[data-category-shortcut]").forEach(link=>link.addEventListener("click",()=>{const category=link.dataset.categoryShortcut;filterInputs.forEach(input=>{if(input.dataset.filterType==="category")input.checked=input.value===category;});document.querySelectorAll("[data-category-shortcut]").forEach(item=>item.classList.toggle("active",item===link));filterApps();}));
+document.querySelector("[data-featured-jump]")?.addEventListener("click",()=>{filterInputs.forEach(input=>{input.checked=input.dataset.filterType==="category"&&input.value==="productivity";});if(appSearch)appSearch.value="INDUS Notes";filterApps();});
