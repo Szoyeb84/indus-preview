@@ -99,12 +99,6 @@ function storeFilter(){const q=(storeSearch?.value||"").trim().toLowerCase();sto
 storeSearch?.addEventListener("input",storeFilter);
 document.addEventListener("keydown",e=>{if(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement?.tagName)){e.preventDefault();storeSearch?.focus();}});
 document.querySelectorAll("[data-shelf]").forEach(link=>link.addEventListener("click",()=>{const category=link.dataset.shelf;const first=storeCards.find(card=>card.dataset.category===category);if(first){storeCards.forEach(card=>card.hidden=card.dataset.category!==category);document.querySelectorAll(".app-shelf").forEach(shelf=>{const cards=[...shelf.querySelectorAll(".store-app-card")];if(cards.length)shelf.hidden=cards.every(card=>card.hidden);});}}));
-function showStoreDetail(name){if(!storeModal)return;const card=storeCards.find(item=>item.dataset.name===name);storeTitle.textContent=name;storeDesc.textContent=storeDescriptions[name]||"An early INDUS app concept.";storeCategory.textContent=(card?.dataset.category||"APP").toUpperCase()+" · CONCEPT PREVIEW";storeIcon.textContent=card?.querySelector(".store-app-icon")?.textContent||name.charAt(0);storeModal.hidden=false;document.body.style.overflow="hidden";storeModal.querySelector(".detail-close")?.focus();}
-function hideStoreDetail(){if(storeModal){storeModal.hidden=true;document.body.style.overflow="";}}
-document.querySelectorAll("[data-open-app]").forEach(button=>button.addEventListener("click",()=>showStoreDetail(button.dataset.openApp)));
-storeModal?.querySelectorAll("[data-close-detail]").forEach(el=>el.addEventListener("click",hideStoreDetail));
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&storeModal&&!storeModal.hidden)hideStoreDetail();});
-
 /* Open a dedicated app information page instead of a temporary modal */
 const appDetailData={
 "INDUS Notes":"indus-notes","StudySpark":"studyspark","PromptDesk":"promptdesk","PixelKit":"pixelkit","QuickConvert":"quickconvert","Arena Companion":"arena-companion"
