@@ -104,3 +104,9 @@ function hideStoreDetail(){if(storeModal){storeModal.hidden=true;document.body.s
 document.querySelectorAll("[data-open-app]").forEach(button=>button.addEventListener("click",()=>showStoreDetail(button.dataset.openApp)));
 storeModal?.querySelectorAll("[data-close-detail]").forEach(el=>el.addEventListener("click",hideStoreDetail));
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&storeModal&&!storeModal.hidden)hideStoreDetail();});
+
+/* Open a dedicated app information page instead of a temporary modal */
+const appDetailData={
+"INDUS Notes":"indus-notes","StudySpark":"studyspark","PromptDesk":"promptdesk","PixelKit":"pixelkit","QuickConvert":"quickconvert","Arena Companion":"arena-companion"
+};
+document.querySelectorAll("[data-open-app]").forEach(button=>button.addEventListener("click",()=>{const slug=appDetailData[button.dataset.openApp];if(slug)window.location.href="app.html?app="+encodeURIComponent(slug);}));
