@@ -85,3 +85,22 @@ detailModal?.querySelectorAll("[data-close-detail]").forEach(el=>el.addEventList
 document.addEventListener("keydown",event=>{if(event.key==="Escape"&&detailModal&&!detailModal.hidden)closeAppDetail();});
 document.querySelectorAll("[data-category-shortcut]").forEach(link=>link.addEventListener("click",()=>{const category=link.dataset.categoryShortcut;filterInputs.forEach(input=>{if(input.dataset.filterType==="category")input.checked=input.value===category;});document.querySelectorAll("[data-category-shortcut]").forEach(item=>item.classList.toggle("active",item===link));filterApps();}));
 document.querySelector("[data-featured-jump]")?.addEventListener("click",()=>{filterInputs.forEach(input=>{input.checked=input.dataset.filterType==="category"&&input.value==="productivity";});if(appSearch)appSearch.value="INDUS Notes";filterApps();});
+
+/* Mobile-first storefront search, category shortcuts and concept detail sheets */
+const storeSearch=document.querySelector("#app-search");
+const storeCards=[...document.querySelectorAll(".store-app-card[data-name]")];
+const storeModal=document.querySelector("#app-detail-modal");
+const storeTitle=document.querySelector("#detail-title");
+const storeDesc=document.querySelector("#detail-description");
+const storeCategory=document.querySelector("#detail-category");
+const storeIcon=document.querySelector("#detail-icon");
+const storeDescriptions={"INDUS Notes":"A simple space for collecting thoughts, notes and everyday ideas.","StudySpark":"A learning companion concept for organising study topics and revision.","PromptDesk":"A tidy workspace concept for saving and organising useful AI prompts.","PixelKit":"A creative toolkit concept for collecting visual references and design ideas.","QuickConvert":"A handy conversion tools concept for everyday tasks.","Arena Companion":"A team organiser concept for practice plans, match notes and schedules."};
+function storeFilter(){const q=(storeSearch?.value||"").trim().toLowerCase();storeCards.forEach(card=>{card.hidden=!!q&&!((card.dataset.search+" "+card.dataset.name).toLowerCase().includes(q));});document.querySelectorAll(".app-shelf").forEach(shelf=>{const cards=[...shelf.querySelectorAll(".store-app-card")];if(cards.length)shelf.hidden=cards.every(card=>card.hidden);});}
+storeSearch?.addEventListener("input",storeFilter);
+document.addEventListener("keydown",e=>{if(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement?.tagName)){e.preventDefault();storeSearch?.focus();}});
+document.querySelectorAll("[data-shelf]").forEach(link=>link.addEventListener("click",()=>{const category=link.dataset.shelf;const first=storeCards.find(card=>card.dataset.category===category);if(first){storeCards.forEach(card=>card.hidden=card.dataset.category!==category);document.querySelectorAll(".app-shelf").forEach(shelf=>{const cards=[...shelf.querySelectorAll(".store-app-card")];if(cards.length)shelf.hidden=cards.every(card=>card.hidden);});}}));
+function showStoreDetail(name){if(!storeModal)return;const card=storeCards.find(item=>item.dataset.name===name);storeTitle.textContent=name;storeDesc.textContent=storeDescriptions[name]||"An early INDUS app concept.";storeCategory.textContent=(card?.dataset.category||"APP").toUpperCase()+" · CONCEPT PREVIEW";storeIcon.textContent=card?.querySelector(".store-app-icon")?.textContent||name.charAt(0);storeModal.hidden=false;document.body.style.overflow="hidden";storeModal.querySelector(".detail-close")?.focus();}
+function hideStoreDetail(){if(storeModal){storeModal.hidden=true;document.body.style.overflow="";}}
+document.querySelectorAll("[data-open-app]").forEach(button=>button.addEventListener("click",()=>showStoreDetail(button.dataset.openApp)));
+storeModal?.querySelectorAll("[data-close-detail]").forEach(el=>el.addEventListener("click",hideStoreDetail));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&storeModal&&!storeModal.hidden)hideStoreDetail();});
